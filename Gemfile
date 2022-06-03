@@ -11,7 +11,6 @@ gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 # gem 'uglifier'
 gem 'terser'
-
 gem 'bootsnap', require: false
 
 # Use ActiveModel has_secure_password
