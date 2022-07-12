@@ -26,6 +26,7 @@ development:
   database: spree_starter_development
   host: <%= ENV.fetch('DB_HOST', 'localhost') %>
   username: postgres
+  password: "password"
   port: <%= ENV.fetch('DB_PORT', '5432') %>
 
   # The specified database role being used to connect to postgres.
@@ -63,6 +64,7 @@ test:
   database: spree_starter_test
   host: <%= ENV.fetch('DB_HOST', 'localhost') %>
   username: postgres
+  password: "password"
   port: <%= ENV.fetch('DB_PORT', '5432') %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -88,3 +90,5 @@ production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 25 %>
+  username: fe_backend_rails
+  password: <%= ENV['FE_BACKEND_RAILS_DATABASE_PASSWORD'] %>
